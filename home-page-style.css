@@ -1,0 +1,216 @@
+  .main-div {
+  display: inline-block;
+  }
+  body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; 
+  width: 100%;
+  }
+
+  .top header {
+    background-color: #444;
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    color: skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  .top{
+  width: 100vw;
+  display: inline-block;
+  position: sticky;
+  top: 0;
+  }
+  .top nav {
+    background-color: antiquewhite;
+    padding: 5px;
+    width: 100vw;
+  }
+  nav a {
+    margin: 0; 
+    padding: 0; 
+    width: 160px; 
+    text-align: left; 
+  }
+  .top nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    justify-content: space-around;
+  }
+  .top a:hover {
+    background-color:antiquewhite;
+  }
+
+  .foot footer {
+    bottom: 0;
+    position: fixed;
+    background-color: black;
+    color: aliceblue;
+    width: 100vw;
+    text-align: center;
+    font-size: 15px;
+    left: 0;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:aliceblue;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;    
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    max-width: 120px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: blanchedalmond;
+    width: 100vw;
+    height: 100%;  
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .animation {
+  height: 50vh;
+  width: 100vw;
+  border: 2px solid steelblue;
+  background-image: url(./images/ani1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 5s;
+  background-size: 100% 100%;
+  animation-name: animate;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  animation-duration: 25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  }
+
+  @keyframes animate {
+    20%{
+      background-image: url(./images/ani2.png);
+    }
+    40% {
+      background-image: url(./images/ani3.jpg);
+    }
+    60% {
+      background-image: url(./images/ani4.jpg);
+    }
+    80%{
+      background-image: url(./images/ani5.jpg);
+    }
+    100%{
+      background-image: url(./images/ani1.jpg);
+    }
+  }
+  .product .card{
+    padding: 10px;
+    margin: 0;
+    margin-left: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    margin-bottom: 100px;
+  }
+  .product .card .p a{
+    width: 350px;
+  }
+  .product .card .p button {
+    width: 89%;
+    margin-left: 15px;
+    padding: 5px;
+    background-color:#c9e7f0 ;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px red solid;
+  }
+  .product .card .p .aa  {
+    text-decoration: none;
+    border: 1px red  solid ;
+    border-radius: 10px;
+    color: #666;
+    text-align: center;
+    padding: 10px;
+    margin-left: 35%;
+    color: rgb(69, 58, 30);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .product .card .p button:hover {
+    background-color: aliceblue;
+  }
+  .p{
+    box-shadow:3px 3px 10px 1px  #666;
+    width: 250px;
+    height: 270px;
+    border-radius: 5px;
+    background-color:#c9e7f0;
+  }
+
+  .product .card .p .image {
+    width: 100%;
+    height: 45%;
+  }
+  
+  .product .card .p img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  h2 {
+    margin-left: 15px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  h4 {
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
+  .product .card .p span {
+    margin-left: 10px;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+    @media (max-width : 800px ) {
+
+      .dropdown .dropdown-content {
+        max-width: 150px;
+        min-width: 50px;
+      }
+      .animation {
+        height: 30vh;
+      }
+      .product .card {
+        grid-template-columns: 50%;
+      }
+      .card {
+        width: calc(100% - 20px);
+        margin: 10px;
+      }
+    }
